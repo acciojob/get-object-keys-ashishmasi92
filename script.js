@@ -3,7 +3,10 @@
 const student = {
 	name:"jonny",
 	age:34,
-	city:"pune"
+	city:"pune",
+	getKeys:()=>{
+		return Object.keys(this).filter(keys => keys !== "getKeys")
+	}
 }
 
 function getkeys(obj){
@@ -14,5 +17,4 @@ function getkeys(obj){
 	
 }
 
-		let x = getkeys(student)
-console.log(x)
+student.getKeys()
